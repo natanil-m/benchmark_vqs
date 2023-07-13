@@ -1,2 +1,3 @@
-# benchmark_vqs
-Enhancing Quantum Simulator Performance for Exact Simulation of Variational Quantum Search: A Comprehensive Benchmarking Study
+## VQS_benchmark
+
+# This code presents a comprehensive performance analysis of Variational Quantum Search, focusing on its quantum simulation. The study investigates the impact of different quantum frameworks, backends and hardware devices on its scalability and efficiency. The results demonstrate the influence of various metrics, including runtime and memory usage, shedding light on the strengths and limitations of each quantum framework. The findings provide valuable insights for researchers and developers working on high-performance extreme computing with variational quantum algorithms. 
