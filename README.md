@@ -1,7 +1,7 @@
 # VQS_benchmark
 
 ## Description
-This code presents a comprehensive performance analysis of Variational Quantum Search (VQS), with a specific focus on its quantum simulation. The study explores the impact of different quantum frameworks, backends, and hardware devices on the scalability and efficiency of VQS. By analyzing various metrics such as runtime and memory usage, this research sheds light on the strengths and limitations of each quantum framework. The findings provide valuable insights for researchers and developers working on high-performance extreme computing with variational quantum algorithms.
+This code presents a comprehensive performance analysis of [Variational Quantum Search (VQS)](https://arxiv.org/abs/2212.09505), with a specific focus on its quantum simulation. The study explores the impact of different quantum frameworks, backends, and hardware devices on the scalability and efficiency of VQS. By analyzing various metrics such as runtime and memory usage, this research sheds light on the strengths and limitations of each quantum framework. The findings provide valuable insights for researchers and developers working on high-performance extreme computing with variational quantum algorithms.
 
 ## Features
 - In-depth performance analysis of Variational Quantum Search
