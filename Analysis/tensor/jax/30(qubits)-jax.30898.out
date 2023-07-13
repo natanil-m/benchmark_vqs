@@ -1,0 +1,33 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+2023-06-09 19:23:06.133115: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+optax not installed, `optimizer` from jax backend cannot work
+backend =  jax
+number of qubits =  30
+num_of_layers =  3
+Traceback (most recent call last):
+  File "/u/msoltaninia/TensorVQS/t1.py", line 243, in <module>
+    expval = quantum_circuit_no_Z(theta=theta,num_of_qubits=num_of_qubits,start_state=initial_state_0_phi1)
+  File "/u/msoltaninia/TensorVQS/t1.py", line 137, in quantum_circuit_no_Z
+    circuit = tc.Circuit(num_of_qubits,inputs=start_state)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/circuit.py", line 77, in __init__
+    inputs = backend.convert_to_tensor(inputs)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/backends/jax_backend.py", line 232, in convert_to_tensor
+    result = jnp.asarray(tensor)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/jax/_src/numpy/lax_numpy.py", line 2012, in asarray
+    return array(a, dtype=dtype, copy=False, order=order)  # type: ignore
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/jax/_src/numpy/lax_numpy.py", line 1945, in array
+    object = tree_map(lambda leaf: leaf.__jax_array__() if hasattr(leaf, "__jax_array__") else leaf,
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/jax/_src/tree_util.py", line 210, in tree_map
+    return treedef.unflatten(f(*xs) for xs in zip(*all_leaves))
+RuntimeError: Too few elements for TreeDef node.
+srun: error: gpuc03: task 0: Exited with exit code 1
+done

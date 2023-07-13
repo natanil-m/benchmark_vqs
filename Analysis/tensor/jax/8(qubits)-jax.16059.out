@@ -1,0 +1,22 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+2023-06-09 18:45:30.776445: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+optax not installed, `optimizer` from jax backend cannot work
+No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+backend =  jax
+number of qubits =  8
+num_of_layers =  3
+expval =  0.02508071
+time consumed: 4.018243s
+CPU Memory usage : (2609816, 6286510)
+GPU memory usage: 0 MiB
+done
+done

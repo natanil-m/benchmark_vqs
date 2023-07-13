@@ -1,0 +1,50 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+('CPU', 'GPU')
+('automatic', 'statevector', 'density_matrix', 'stabilizer', 'matrix_product_state', 'extended_stabilizer', 'unitary', 'superop')
+num_of_qubits = 19
+start_state = None
+max_repeat = 1
+iter_max = 300
+seed = 80
+use_sampler =  False
+n_shots =  6000
+method =  automatic
+method_result =  automatic
+device = CPU
+Traceback (most recent call last):
+  File "/u/msoltaninia/VQS_qiskit/HPC_main1.py", line 214, in <module>
+    expval=quantum_circuit_no_Z(
+  File "/u/msoltaninia/VQS_qiskit/HPC_main1.py", line 128, in quantum_circuit_no_Z
+    expectation_exact = MatrixExpectation().convert(measurable_expression)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/expectations/matrix_expectation.py", line 40, in convert
+    return operator.traverse(self.convert)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/list_ops/list_op.py", line 236, in traverse
+    [convert_fn(op) for op in self.oplist], coeff=coeff, abelian=self.abelian
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/list_ops/list_op.py", line 236, in <listcomp>
+    [convert_fn(op) for op in self.oplist], coeff=coeff, abelian=self.abelian
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/expectations/matrix_expectation.py", line 38, in convert
+    return operator.to_matrix_op()
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/state_fns/operator_state_fn.py", line 132, in to_matrix_op
+    self.primitive.to_matrix_op(massive=massive) * self.coeff,
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/primitive_ops/primitive_op.py", line 266, in to_matrix_op
+    prim_mat = op.to_matrix(massive=massive)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/opflow/primitive_ops/circuit_op.py", line 151, in to_matrix
+    unitary = qiskit.quantum_info.Operator(self.to_circuit()).data
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/quantum_info/operators/operator.py", line 85, in __init__
+    self._data = self._init_instruction(data).data
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/qiskit/quantum_info/operators/operator.py", line 537, in _init_instruction
+    op = Operator(np.eye(dimension))
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/numpy/lib/twodim_base.py", line 215, in eye
+    m = zeros((N, M), dtype=dtype, order=order)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 2.00 TiB for an array with shape (524288, 524288) and data type float64
+srun: error: gpuc01: task 0: Exited with exit code 1
+done

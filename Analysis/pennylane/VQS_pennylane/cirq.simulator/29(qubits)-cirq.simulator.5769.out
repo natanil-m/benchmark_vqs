@@ -1,0 +1,58 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+number of qubits =  29
+number of layers =  3
+device_name =  cirq.simulator
+initial_state_phi1[last 5]=[0, 0, 0, 0, 6.103515625e-05]
+Traceback (most recent call last):
+  File "/u/msoltaninia/VQS_pennylane/m.py", line 114, in <module>
+    print('expval = ', quantum_circuit_with_HT(theta=theta))
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/qnode.py", line 889, in __call__
+    res = qml.execute(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/interfaces/execution.py", line 729, in execute
+    res = _execute(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/interfaces/autograd.py", line 81, in execute
+    return _execute(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/autograd/tracer.py", line 48, in f_wrapped
+    return f_raw(*args, **kwargs)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/interfaces/autograd.py", line 125, in _execute
+    res, jacs = execute_fn(tapes, **gradient_kwargs)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/interfaces/execution.py", line 205, in wrapper
+    res = fn(execution_tapes.values(), **kwargs)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/interfaces/execution.py", line 131, in fn
+    return original_fn(tapes, **kwargs)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/_qubit_device.py", line 591, in batch_execute
+    res = self.execute(circuit)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/_qubit_device.py", line 381, in execute
+    results = self.statistics(circuit=circuit)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/_qubit_device.py", line 736, in statistics
+    results.append(self.expval(obs, shot_range=shot_range, bin_size=bin_size))
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane_cirq/simulator_device.py", line 193, in expval
+    return self._simulator.simulate_expectation_values(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/sim/simulator.py", line 355, in simulate_expectation_values
+    return self.simulate_expectation_values_sweep(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/sim/simulator.py", line 377, in simulate_expectation_values_sweep
+    return list(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/sim/sparse_simulator.py", line 209, in simulate_expectation_values_sweep_iter
+    yield from (
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/sim/sparse_simulator.py", line 210, in <genexpr>
+    [obs.expectation_from_state_vector(result.final_state_vector, qmap) for obs in pslist]
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/sim/sparse_simulator.py", line 210, in <listcomp>
+    [obs.expectation_from_state_vector(result.final_state_vector, qmap) for obs in pslist]
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/ops/linear_combinations.py", line 674, in expectation_from_state_vector
+    qis.validate_normalized_state_vector(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/cirq/qis/states.py", line 886, in validate_normalized_state_vector
+    raise ValueError(f'State_vector is not normalized instead had norm {norm}')
+ValueError: State_vector is not normalized instead had norm 0.9999697804450989
+srun: error: gpuc02: task 0: Exited with exit code 1
+done

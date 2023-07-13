@@ -1,0 +1,21 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+2023-06-09 18:45:24.745850: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2023-06-09 18:45:27.718429: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+backend =  tensorflow
+number of qubits =  13
+num_of_layers =  3
+expval =  tf.Tensor(-0.012411565, shape=(), dtype=float32)
+time consumed: 3.094444s
+CPU Memory usage : (1485533, 5075820)
+GPU memory usage: 989 MiB
+done
+done

@@ -1,0 +1,47 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+2023-06-09 19:22:51.830657: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2023-06-09 19:23:21.404943: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+backend =  tensorflow
+number of qubits =  27
+num_of_layers =  3
+2023-06-09 19:23:40.875956: W tensorflow/tsl/framework/bfc_allocator.cc:485] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.00GiB (rounded to 2147483648)requested by op MatMul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2023-06-09 19:23:40.876459: W tensorflow/tsl/framework/bfc_allocator.cc:497] ***********___*********************************************************************************_____
+2023-06-09 19:23:40.876517: W tensorflow/core/framework/op_kernel.cc:1830] OP_REQUIRES failed at matmul_op_impl.h:730 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[4,67108864] and type complex64 on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+Traceback (most recent call last):
+  File "/u/msoltaninia/TensorVQS/t1.py", line 243, in <module>
+    expval = quantum_circuit_no_Z(theta=theta,num_of_qubits=num_of_qubits,start_state=initial_state_0_phi1)
+  File "/u/msoltaninia/TensorVQS/t1.py", line 151, in quantum_circuit_no_Z
+    exp_val=circuit.expectation([tc.gates.z(), [0]])
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/circuit.py", line 841, in expectation
+    nodes1 = self.expectation_before(*ops, reuse=reuse)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/basecircuit.py", line 283, in expectation_before
+    nodes1, edge1 = self._copy_state_tensor(reuse=reuse)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/basecircuit.py", line 252, in _copy_state_tensor
+    t = contractor(nodes, output_edge_order=d_edges)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/cons.py", line 655, in custom
+    return _base(
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/cons.py", line 615, in _base
+    new_node = tn.contract_between(nodes[a], nodes[b], allow_outer_product=True)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensornetwork/network_components.py", line 2085, in contract_between
+    new_tensor = backend.tensordot(node1.tensor, node2.tensor, [axes1, axes2])
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorcircuit/backends/tensorflow_backend.py", line 75, in _tensordot_tf
+    return tf.tensordot(a, b, axes)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7262, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__MatMul_device_/job:localhost/replica:0/task:0/device:GPU:0}} OOM when allocating tensor with shape[4,67108864] and type complex64 on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:MatMul]
+srun: error: gpuc01: task 0: Exited with exit code 1
+done

@@ -1,0 +1,13 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+slurmstepd: error: *** STEP 2129580.0 ON gpuc01 CANCELLED AT 2023-07-05T02:58:36 ***
+slurmstepd: error: *** JOB 2129580 ON gpuc01 CANCELLED AT 2023-07-05T02:58:36 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

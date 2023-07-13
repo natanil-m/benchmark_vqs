@@ -1,0 +1,24 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) cudnn/8.4.1.50
+  3) ucx/1.11.2          6) modtree/gpu     9) anaconda3_gpu/4.13.0
+
+ 
+
+job is starting on dt-login01.delta.internal.ncsa.edu
+number of qubits =  31
+number of layers =  3
+device_name =  lightning.gpu
+initial_state_phi1[last 5]=[0, 0, 0, 0, 3.0517578125e-05]
+Traceback (most recent call last):
+  File "/u/msoltaninia/VQS_pennylane/m.py", line 87, in <module>
+    dev_with_HT = qml.device(device_name, wires=num_of_qubits)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane/__init__.py", line 326, in device
+    dev = plugin_device_class(*args, **options)
+  File "/u/msoltaninia/.conda/envs/global_finder310/lib/python3.10/site-packages/pennylane_lightning_gpu/lightning_gpu.py", line 217, in __init__
+    self._gpu_state = _gpu_dtype(c_dtype)(self.num_wires)
+pennylane_lightning_gpu.lightning_gpu_qubit_ops.PLException: [/project/pennylane_lightning_gpu/src/util/DataBuffer.hpp][Line:37][Method:DataBuffer]: Error in PennyLane Lightning: out of memory
+srun: error: gpuc01: task 0: Exited with exit code 1
+done
