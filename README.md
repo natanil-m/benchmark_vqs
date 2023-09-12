@@ -11,7 +11,7 @@ This code presents a comprehensive performance analysis of [Variational Quantum 
 - Insights into the strengths and limitations of each quantum framework
 
 ## Results
-To access detailed data for the benchmarking graphs, please refer to the ![Tables](https://github.com/natanil-m/benchmark_vqs/blob/main/Analysis/Benchmarking%20Tables.docx) document within this repository.
+To access detailed data for the benchmarking graphs, please refer to the Analysis/Tables.docx document within this repository.
 
 All tests were conducted on the [NCSA Delta](https://wiki.ncsa.illinois.edu/display/DSC/Delta+User+Guide) supercomputer. (GPU=A100x8)
 
