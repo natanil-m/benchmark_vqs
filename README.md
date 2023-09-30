@@ -1,4 +1,6 @@
-# VQS_benchmark
+# Comparison of Quantum Simulators for Variational Quantum Search: A Benchmark Study
+
+### This [benchmarking paper](https://arxiv.org/abs/2309.05924) has been accepted by 27th Annual IEEE High Performance Extreme Computing Conference (HPEC) 2023.
 
 ## Description
 This code presents a comprehensive performance analysis of [Variational Quantum Search (VQS)](https://arxiv.org/abs/2212.09505), with a specific focus on its quantum simulation. The study explores the impact of different quantum frameworks, backends, and hardware devices on the scalability and efficiency of VQS. By analyzing various metrics such as runtime and memory usage, this research sheds light on the strengths and limitations of each quantum framework. The findings provide valuable insights for researchers and developers working on high-performance extreme computing with variational quantum algorithms.
