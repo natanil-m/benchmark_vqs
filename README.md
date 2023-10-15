@@ -25,8 +25,8 @@ Time and memory consumed by different simulators to obtain the expectation value
 
 ## Authors
 
-- Mohammadreza Soltaninia
-- Junpeng Zhan
+- Mohammadreza Soltaninia (ms69@alfred.edu)
+- Junpeng Zhan (zhanj@alfred.edu)
 
 
 ## Contributing
