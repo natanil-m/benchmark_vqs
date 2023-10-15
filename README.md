@@ -23,6 +23,11 @@ All tests were conducted on the [NCSA Delta](https://wiki.ncsa.illinois.edu/disp
 
 Time and memory consumed by different simulators to obtain the expectation value of observable 〈Z1〉 in the VQS algorithm for different numbers of qubits. Note: Pennylane (CPU), Pennylane (GPU), and TensorCircuit (CPU) reached their memory limit for more than 28, 29, and 30 qubits, respectively.  Qiskit (CPU) and Cirq encounter errors when calculating the exact expectation value for more than 15 and 28 qubits, respectively.  Qulacs and Project Q encounter time limit when calculating the exact expectation value for more than 30 and 16 qubits, respectively.  
 
+## Authors
+
+- Mohammadreza Soltaninia
+- Junpeng Zhan
+
 
 ## Contributing
 Contributions to the VQS_benchmark project are welcome and encouraged! If you would like to contribute to this project, please follow these guidelines:
